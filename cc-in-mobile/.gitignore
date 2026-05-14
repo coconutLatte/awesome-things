@@ -1,0 +1,6 @@
+# 包含敏感信息的生成文件
+client/.env
+client/frpc.toml
+server/.env
+server/config/
+server/data/

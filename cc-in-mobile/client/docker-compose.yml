@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  claude-code-webui:
+    image: node:22-slim
+    container_name: claude-code-webui
+    restart: unless-stopped
+    working_dir: /app
+    volumes:
+      - ~/.claude:/root/.claude
+      - ~/.claude.json:/root/.claude.json:ro
+      - ~/.local:/root/.local:ro
+      - /root/workspace:/root/workspace
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PATH=/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    command: >
+      sh -c "
+        npm install -g claude-code-webui &&
+        claude-code-webui --port 3000 --host 0.0.0.0
+      "
+
+  frpc:
+    image: snowdreamtech/frpc:latest
+    container_name: frpc
+    restart: unless-stopped
+    volumes:
+      - ./frpc.toml:/etc/frp/frpc.toml:ro
+    depends_on:
+      - claude-code-webui
+    network_mode: "host"

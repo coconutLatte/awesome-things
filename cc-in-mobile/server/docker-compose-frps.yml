@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  frps:
+    image: snowdreamtech/frps:latest
+    container_name: frps
+    restart: unless-stopped
+    ports:
+      - "7000:7000"   # frp服务端口
+      - "3000:3000"   # Claude Code WebUI代理端口
+      - "7500:7500"   # Dashboard端口
+    volumes:
+      - ./config/frps.ini:/etc/frp/frps.ini:ro
+
+  nginx:
+    image: nginx:alpine
+    container_name: nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./config/nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./config/nginx/.htpasswd:/etc/nginx/.htpasswd:ro
+      - ./data/letsencrypt:/etc/letsencrypt
+      - ./data/certbot/www:/var/www/certbot
+    depends_on:
+      - frps
+
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    volumes:
+      - ./data/letsencrypt:/etc/letsencrypt
+      - ./data/certbot/www:/var/www/certbot
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
