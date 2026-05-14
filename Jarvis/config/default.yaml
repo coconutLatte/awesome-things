@@ -1,0 +1,39 @@
+# Jarvis 桌面宠物配置
+platform: windows  # windows / rpi
+
+# AI 配置（api_key 和 base_url 建议放在 ~/.jarvis.json 中）
+ai:
+  api_key: ""  # 留空则读取环境变量 ANTHROPIC_API_KEY
+  base_url: https://api.anthropic.com  # API 地址，代理/中转请修改此处
+  model: claude-sonnet-4-20250514
+  max_tokens: 1024
+  system_prompt: |
+    你是 Jarvis，一个智能个人助手。
+    你的性格冷静、专业、略带幽默，就像钢铁侠中的 JARVIS 一样。
+    回复要简洁有力，避免冗长。
+    如果用户没有明确要求，回复控制在 2-3 句话以内。
+
+# 显示配置
+display:
+  width: 120
+  height: 120
+  bubble_width: 300
+  bubble_max_height: 400
+  fullscreen: false
+
+# 窗口位置
+window:
+  x: -1  # -1 表示屏幕右下角
+  y: -1
+
+# 动画配置
+animation:
+  idle: animations/idle.gif
+  thinking: animations/thinking.gif
+  talking: animations/talking.gif
+
+# 日志配置
+logging:
+  level: INFO
+  file: logs/jarvis.log
+  rotation: 10 MB

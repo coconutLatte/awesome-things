@@ -1,0 +1,33 @@
+2026-05-14 15:59:13.681 | INFO     | __main__:main:19 - Jarvis 启动中...
+2026-05-14 15:59:13.681 | INFO     | __main__:main:26 - 平台: windows
+2026-05-14 15:59:14.958 | INFO     | skills.base:register:30 - 注册技能: greeting
+2026-05-14 15:59:14.959 | INFO     | core.engine:__init__:43 - Engine 初始化完成
+2026-05-14 15:59:53.672 | INFO     | __main__:main:19 - Jarvis 启动中...
+2026-05-14 15:59:53.673 | INFO     | __main__:main:26 - 平台: windows
+2026-05-14 15:59:54.389 | INFO     | skills.base:register:30 - 注册技能: greeting
+2026-05-14 15:59:54.390 | INFO     | core.engine:__init__:43 - Engine 初始化完成
+2026-05-14 15:59:54.459 | INFO     | __main__:main:48 - Jarvis 已启动 ✨
+2026-05-14 15:59:54.460 | INFO     | __main__:main:49 - 点击宠物打开对话，右键菜单查看更多选项
+2026-05-14 16:00:08.461 | ERROR    | core.ai_brain:think:36 - AI 调用失败: Connection error.
+2026-05-14 16:03:32.542 | INFO     | __main__:main:19 - Jarvis 启动中...
+2026-05-14 16:03:32.543 | INFO     | __main__:main:26 - 平台: windows
+2026-05-14 16:03:33.219 | INFO     | core.ai_brain:__init__:13 - AI 配置: base_url=http://one-api.server22.jz, model=mimo-v2.5-pro[1m]
+2026-05-14 16:03:33.246 | INFO     | skills.base:register:30 - 注册技能: greeting
+2026-05-14 16:03:33.247 | INFO     | core.engine:__init__:43 - Engine 初始化完成
+2026-05-14 16:03:33.371 | INFO     | __main__:main:48 - Jarvis 已启动 ✨
+2026-05-14 16:03:33.372 | INFO     | __main__:main:49 - 点击宠物打开对话，右键菜单查看更多选项
+2026-05-14 16:03:44.988 | ERROR    | core.ai_brain:think:42 - AI 调用失败: Error code: 503 - {'error': {'code': 'model_not_found', 'message': 'No available channel for model mimo-v2.5-pro[1m] under group default (distributor) (request id: 20260514080345336712758268d9d6SXqcP1QZ)', 'type': 'new_api_error'}}
+2026-05-14 16:04:21.018 | INFO     | __main__:main:19 - Jarvis 启动中...
+2026-05-14 16:04:21.018 | INFO     | __main__:main:26 - 平台: windows
+2026-05-14 16:04:21.706 | INFO     | core.ai_brain:__init__:13 - AI 配置: base_url=http://one-api.server22.jz, model=mimo-v2.5-pro
+2026-05-14 16:04:21.732 | INFO     | skills.base:register:30 - 注册技能: greeting
+2026-05-14 16:04:21.732 | INFO     | core.engine:__init__:43 - Engine 初始化完成
+2026-05-14 16:04:21.823 | INFO     | __main__:main:48 - Jarvis 已启动 ✨
+2026-05-14 16:04:21.824 | INFO     | __main__:main:49 - 点击宠物打开对话，右键菜单查看更多选项
+2026-05-14 16:10:48.743 | INFO     | __main__:main:19 - Jarvis 启动中...
+2026-05-14 16:10:48.744 | INFO     | __main__:main:26 - 平台: windows
+2026-05-14 16:10:49.430 | INFO     | core.ai_brain:__init__:13 - AI 配置: base_url=http://one-api.server22.jz, model=mimo-v2.5
+2026-05-14 16:10:49.452 | INFO     | skills.base:register:30 - 注册技能: greeting
+2026-05-14 16:10:49.453 | INFO     | core.engine:__init__:44 - Engine 初始化完成
+2026-05-14 16:10:49.589 | INFO     | __main__:main:48 - Jarvis 已启动 ✨
+2026-05-14 16:10:49.590 | INFO     | __main__:main:49 - 点击宠物打开对话，右键菜单查看更多选项
