@@ -1,0 +1,10 @@
+{
+  "name": "cc-context-monitor",
+  "version": "1.0.0",
+  "description": "Real-time context window usage display in the Claude Code status line",
+  "author": {
+    "name": "Claude Code User"
+  },
+  "license": "MIT",
+  "keywords": ["context", "tokens", "statusline", "monitor"]
+}
