@@ -10,7 +10,6 @@
       "Bash(gh repo *)",
       "Bash(docker build *)",
       "Bash(docker run *)",
-      "Bash(bash -n /root/workspace/cc-custom-plugins/wechat-coder-test/deploy.sh)",
       "Bash(git *)",
       "Bash(GIT_COMMITTER_EMAIL=\"690324981@qq.com\" git commit *)",
       "Bash(GIT_COMMITTER_EMAIL=\"690324981@qq.com\" git rebase *)",
