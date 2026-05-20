@@ -28,7 +28,7 @@ class Engine:
             api_key=api_key,
             base_url=base_url,
             model=config.get("ai.model", "claude-sonnet-4-20250514"),
-            max_tokens=config.get("ai.max_tokens", 1024),
+            max_tokens=config.get("ai.max_tokens", 131072),
         )
 
         # 设置系统提示词

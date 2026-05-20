@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "if echo \"$CLAUDE_FILE_PATH\" | grep -qE 'Jarvis/.+\\.py$'; then cd /root/workspace/awesome-things/Jarvis && python3 -m pytest tests/ -v --tb=short 2>&1 | head -80; fi",
+            "command": "if echo \"$CLAUDE_FILE_PATH\" | grep -qE 'Jarvis/.+\\.py$'; then /root/workspace/awesome-things/Jarvis/scripts/run_tests.sh | head -80; fi",
             "timeout": 60
           }
         ]

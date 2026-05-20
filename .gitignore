@@ -1,0 +1,15 @@
+# 项目本地配置文件，不提交到 git
+*.test.json
+.jarvis*.json
+
+# Python
+__pycache__/
+*.pyc
+
+# 日志
+logs/
+*.log
+
+# IDE
+.vscode/
+.idea/

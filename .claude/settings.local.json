@@ -42,7 +42,28 @@
       "Bash(cp -r /root/.claude/plugins/data /home/claude-dev/.claude/plugins/data)",
       "Bash(cp -r /root/.claude/plugins/marketplaces /home/claude-dev/.claude/plugins/marketplaces)",
       "Bash(cp -r /root/.claude/plugins/cache /home/claude-dev/.claude/plugins/cache)",
-      "Bash(cp /root/.claude/plugins/installed_plugins.json /home/claude-dev/.claude/plugins/installed_plugins.json)"
+      "Bash(cp /root/.claude/plugins/installed_plugins.json /home/claude-dev/.claude/plugins/installed_plugins.json)",
+      "Bash(cp -v /root/.claude/settings* /home/claude-dev/.claude/)",
+      "Bash(chown -R claude-dev:claude-dev /home/claude-dev/.claude/)",
+      "Bash(curl -s \"https://api.github.com/search/repositories?q=hermes+agent&sort=stars&per_page=10\")",
+      "Bash(python3 -c \"import sys,json; data=json.load\\(sys.stdin\\); [print\\(f\\\\\"{r['full_name']} ⭐{r['stargazers_count']} - {r['description']}\\\\\"\\) for r in data.get\\('items',[]\\)]\")",
+      "WebFetch(domain:hermes-agent.nousresearch.com)",
+      "Bash(hermes --version)",
+      "Bash(hermes profile *)",
+      "Bash(bash setup-profile.sh)",
+      "Bash(bash *)",
+      "Bash(hermes gateway *)",
+      "Bash(systemctl list-units *)",
+      "Bash(beier gateway *)",
+      "Bash(hermes version *)",
+      "Bash(pip index *)",
+      "Bash(pip install *)",
+      "Bash(hermes status *)",
+      "Bash(systemctl status *)",
+      "Bash(hermes update *)",
+      "Bash(hermes --help)",
+      "Read(//usr/bin/**)",
+      "Read(//usr/local/bin/**)"
     ]
   }
 }

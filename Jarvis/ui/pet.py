@@ -52,6 +52,7 @@ class PetWindow(QWidget):
 
     def _connect_events(self):
         event_bus.state_changed.connect(self._on_state_changed)
+        event_bus.error_occurred.connect(self._on_error)
 
     def _position_at_bottom_right(self):
         screen = QApplication.primaryScreen().geometry()
@@ -81,6 +82,11 @@ class PetWindow(QWidget):
 
     def _on_message_sent(self, text: str):
         event_bus.user_message.emit(text)
+
+    def _on_error(self, error_msg: str):
+        self.chat_bubble.add_message("系统", f"⚠️ {error_msg}")
+        if not self.chat_bubble.isVisible():
+            self._toggle_chat()
 
     def mousePressEvent(self, event):
         if event.button() == Qt.LeftButton:
